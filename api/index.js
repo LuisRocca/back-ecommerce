@@ -18,11 +18,13 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
+const { conn, Products} = require('./src/db.js');
+const {showAll} = require('./src/methods/index.js')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT || 3001 , () => {
+  server.listen(process.env.PORT || 3001 , async () => {
     console.log('%s listening at 3001'); // 
+    await showAll();
   });
 });
