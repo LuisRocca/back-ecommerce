@@ -10,7 +10,6 @@ module.exports = (sequelize) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-            // set(value) { this.setDataValue('name', value.toLowerCase()); },
         },
         price: {
             type: DataTypes.FLOAT,
@@ -24,11 +23,11 @@ module.exports = (sequelize) => {
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: "aqui no va la lata de mierda que teniamos"
+            defaultValue: "Not found"
         },
         color: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         storage: {
             type: DataTypes.STRING,
@@ -43,8 +42,8 @@ module.exports = (sequelize) => {
             allowNull: true,
         },
         RAM: {
-            tipe: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: true,
-        }
+        },
     }, {timestamps: false} );
 };

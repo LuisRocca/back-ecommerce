@@ -1,8 +1,8 @@
 {
     "apple": {
         "products": {
-            "category": {
-                "iphone": [{"name": "iPhone 13", "color": ["Starlight", "Blue", "Midnight", "Pink", "Red"], "storage": ["128gb", "256gb", "512gb"]},
+            "category": [{
+                "iphone": [{"name": "iPhone 13", "color": ["Starlight", "Blue", "Midnight", "Pink", "Red"], "storage": ["128gb", "256gb", "512gb"], "price": 80, "stock": 10},
                             {"name": "iPhone 13 Mini", "color": ["Starlight", "Blue", "Midnight", "Pink", "Red"], "storage": ["128gb", "256gb", "512gb"]},
                             {"name": "iPhone 13 Pro", "color": ["Sierra Blue", "Silver", "Gold", "Graphite"], "storage": ["128gb", "256gb", "512gb", "1tb"]},
                             {"name": "iPhone 13 Pro Max", "color": ["Sierra Blue", "Silver", "Gold", "Graphite"], "storage": ["128gb", "256gb", "512gb", "1tb"]},
@@ -29,9 +29,9 @@
                             {"name": "Apple Watch Series 7", "Connectivity": "GPS + Cellular", "model": ["45mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]},
                             {"name": "Apple Watch Series 7", "Connectivity": "GPS", "model": ["45mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]}],
                             
-                "airpods": [{"name": "AirPods 2nd generation"},
-                            {"name": "AirPods 3rd generation"},
-                            {"name": "AirPods Pro"},
+                "airpods": [{"name": "AirPods 2nd generation", "color": ["White"]},
+                            {"name": "AirPods 3rd generation", "color": ["White"]},
+                            {"name": "AirPods Pro", "color": ["White"]},
                             {"name": "AirPods Max", "color": ["Space Gray", "Silver", "Pink", "Green", "Sky Blue"]}],
 
 
@@ -45,10 +45,10 @@
                 
                 
                 
-                "tv and Home": [{"name": "Apple TV 4K", "storage": ["32gb", "64gb"]},
+                "tv": [{"name": "Apple TV 4K", "storage": ["32gb", "64gb"]},
                                 {"name": "Apple TV HD", "storage": ["32gb"]},
                                 {"name": "HomePod mini", "color": ["Space Gray", "Blue", "Yellow", "Orange", "White"]}]
-            }
+            }]
         }
     }
 }  
