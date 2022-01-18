@@ -1,0 +1,54 @@
+{
+    "apple": {
+        "products": {
+            "category": {
+                "iphone": [{"name": "iPhone 13", "color": ["Starlight", "Blue", "Midnight", "Pink", "Red"], "storage": ["128gb", "256gb", "512gb"]},
+                            {"name": "iPhone 13 Mini", "color": ["Starlight", "Blue", "Midnight", "Pink", "Red"], "storage": ["128gb", "256gb", "512gb"]},
+                            {"name": "iPhone 13 Pro", "color": ["Sierra Blue", "Silver", "Gold", "Graphite"], "storage": ["128gb", "256gb", "512gb", "1tb"]},
+                            {"name": "iPhone 13 Pro Max", "color": ["Sierra Blue", "Silver", "Gold", "Graphite"], "storage": ["128gb", "256gb", "512gb", "1tb"]},
+                            {"name": "iPhone 12", "color": ["Purple", "Blue", "Green", "White", "Black", "Red"], "storage": ["64gb", "128gb", "256gb"]},
+                            {"name": "iPhone 12 Mini", "color": ["Purple", "Blue", "Green", "White", "Black", "Red"], "storage": ["64gb", "128gb", "256gb"]},
+                            {"name": "iPhone 11", "color": ["Purple", "Yellow", "Green", "White", "Black", "Red"], "storage": ["64gb", "128gb"]},
+                            {"name": "iPhone SE", "color": ["White", "Black", "Red"], "storage": ["64gb", "128gb"]}],
+
+
+                "ipad": [{"name": "iPad", "color": ["Space Gray", "Silver"], "storage": ["64gb", "256gb"], "connectivity": ["Wi-Fi", "Wi-Fi + Cellular"]},
+                         {"name": "iPad mini", "color": ["Space Gray", "Pink", "Purple", "Starlight"], "storage": ["64gb", "256gb"], "connectivity": ["Wi-Fi", "Wi-Fi + Cellular"]},
+                         {"name": "iPad Air", "color": ["Space Gray", "Silver", "Green", "Rose Gold", "Sky Blue"], "storage": ["64gb", "256gb"], "connectivity": ["Wi-Fi", "Wi-Fi + Cellular"]},
+                         {"name": "iPad Pro", "model":["11 pulgadas", "12.9 pulgadas"], "color": ["Space Gray", "Silver"], "storage": ["128gb", "256gb", "512gb", "1tb", "2tb"], "connectivity": ["Wi-Fi", "Wi-Fi + Cellular"]}],
+                
+                
+                "watch": [{"name": "Apple Watch Series 3", "Connectivity": "GPS", "model": ["40mm"], "color": ["Silver Aluminium", "Space Gray Aluminium"]},
+                            {"name": "Apple Watch Series 3", "Connectivity": "GPS", "model": ["44mm"], "color": ["Silver Aluminium", "Space Gray Aluminium"]},
+                            {"name": "Apple Watch SE", "Connectivity": "GPS", "model": ["40mm"], "color": ["Silver Aluminium", "Space Gray Aluminium", "Gold Aluminium"]},
+                            {"name": "Apple Watch SE", "Connectivity": "GPS", "model": ["44mm"], "color": ["Silver Aluminium", "Space Gray Aluminium", "Gold Aluminium"]},
+                            {"name": "Apple Watch SE", "Connectivity": "GPS + Cellular", "model": ["40mm"], "color": ["Silver Aluminium", "Space Gray Aluminium", "Gold Aluminium"]},
+                            {"name": "Apple Watch SE", "Connectivity": "GPS + Cellular", "model": ["44mm"], "color": ["Silver Aluminium", "Space Gray Aluminium", "Gold Aluminium"]},
+                            {"name": "Apple Watch Series 7", "Connectivity": "GPS", "model": ["41mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]},
+                            {"name": "Apple Watch Series 7", "Connectivity": "GPS + Cellular", "model": ["41mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]},
+                            {"name": "Apple Watch Series 7", "Connectivity": "GPS + Cellular", "model": ["45mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]},
+                            {"name": "Apple Watch Series 7", "Connectivity": "GPS", "model": ["45mm"], "color": ["Blue Aluminium", "Green Aluminium", "Starlight Aluminium", "Midnight Aluminium", "Red Aluminium", "Silver Aluminium", "Gold Stainless Steel"]}],
+                            
+                "airpods": [{"name": "AirPods 2nd generation"},
+                            {"name": "AirPods 3rd generation"},
+                            {"name": "AirPods Pro"},
+                            {"name": "AirPods Max", "color": ["Space Gray", "Silver", "Pink", "Green", "Sky Blue"]}],
+
+
+
+                "macbook": [{"name": "Apple Mac Mini M1 Chip", "storage": ["256gb SSD", "512gb SSD", "1tb SSD", "2tb SSD"], "RAM": ["8gb", "16gb"]},
+                            {"name": "Apple Macbook Pro M1 Chip 13-inch", "storage": ["256gb SSD", "512gb SSD", "1tb SSD", "2tb SSD"], "color": ["Space Gray", "Silver"], "RAM": ["8gb", "16gb"]},
+                            {"name": "Apple Macbook Pro M1 Chip 14-inch", "storage": ["512gb SSD", "1tb SSD", "2tb SSD", "4tb SSD", "8tb SSD"], "color": ["Space Gray", "Silver"], "RAM": ["16gb", "32gb"], "processor": ["Apple M1 Pro with 8-core CPU, 14-core GPU, 16-core Neural Engine", "Apple M1 Pro with 10-core CPU, 14-core GPU, 16-core Neural Engine"]},
+                            {"name": "Apple Macbook Pro M1 Chip 16-inch", "storage": ["512gb SSD", "1tb SSD", "2tb SSD", "4tb SSD", "8tb SSD"], "color": ["Space Gray", "Silver"], "RAM": ["16gb", "32gb"], "processor": ["Apple M1 Pro with 10-core CPU, 16-core GPU, 16-core Neural Engine", "Apple M1 Max with 10-core CPU, 24-core GPU, 16-core Neural Engine"]},
+                            {"name": "Apple Macbook Air M1 Chip 13-inch", "storage": ["256gb SSD", "512gb SSD", "1tb SSD", "2tb SSD"], "color": ["Space Gray", "Silver", "Gold"], "RAM": ["8gb", "16gb"]}],
+
+                
+                
+                
+                "tv and Home": [{"name": "Apple TV 4K", "storage": ["32gb", "64gb"]},
+                                {"name": "Apple TV HD", "storage": ["32gb"]},
+                                {"name": "HomePod mini", "color": ["Space Gray", "Blue", "Yellow", "Orange", "White"]}]
+            }
+        }
+    }
+}
