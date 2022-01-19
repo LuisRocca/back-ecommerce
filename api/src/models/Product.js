@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('products', {
+    sequelize.define('product', {
         id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -10,6 +10,7 @@ module.exports = (sequelize) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            // set(value) { this.setDataValue('name', value.toLowerCase()); },
         },
         price: {
             type: DataTypes.FLOAT,
@@ -23,27 +24,27 @@ module.exports = (sequelize) => {
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: "Not found"
+            defaultValue: "aqui no va la lata de mierda que teniamos"
         },
         color: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         storage: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         connectivity: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         model: {
-            type:DataTypes.STRING,
+            type:DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
-        RAM: {
-            type: DataTypes.STRING,
+        ram: {
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
-        },
+        }
     }, {timestamps: false} );
 };
