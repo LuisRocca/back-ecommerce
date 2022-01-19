@@ -18,7 +18,7 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
-const { conn, Products} = require('./src/db.js');
+const { conn, Product} = require('./src/db.js');
 const {showAll} = require('./src/methods/index.js')
 
 // Syncing all the models at once.

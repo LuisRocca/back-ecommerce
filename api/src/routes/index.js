@@ -1,10 +1,10 @@
 const { Router } = require('express');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
-// const dogRouter = require('./dog');
+const productApple = require('./products.js');
 // const dogsRouter = require('./dogs');
 // const temperamentRouter = require('./temperament');
-const {showAll} = require('../methods/index.js')
+// const {showAll} = require('../methods/index.js')
 
 const router = Router();
 
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     res.status(200).send('index')
 });
 
-// router.use('/dogs', dogsRouter);
+router.use('/products', productApple);
 // router.use('/temperament', temperamentRouter);
 // router.use('/dog', dogRouter);
 
