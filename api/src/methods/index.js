@@ -1,6 +1,6 @@
 const {default: axios} = require("axios");
 const {conn} = require('../db');
-const { Products } = conn.models;
+const { Product } = conn.models;
 
 module.exports = {
     showAll: async () => {
@@ -39,6 +39,6 @@ module.exports = {
                 RAM: e.RAM,
             }
         })
-        await Products.bulkCreate(appleProduct)
+        await Product.bulkCreate(appleProduct)
         }
 }
