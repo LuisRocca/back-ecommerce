@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('products', {
+    sequelize.define('product', {
         id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: "Not found"
+            defaultValue: "Not foundhttps://d500.epimg.net/cincodias/imagenes/2022/01/11/companias/1641922124_752638_1641922274_noticia_normal_recorte1.jpg"
         },
         color: {
             type: DataTypes.STRING,
