@@ -58,10 +58,10 @@ sequelize.models = Object.fromEntries(capsEntries);
 const {Product, User, Review} = sequelize.models;
 // Aca vendrian las relaciones
 
-// Product.hasMany(Reviews);
-//Relacion Reviews clientes productos
-// User.belongsToMany(Product, {through: Review}) // da el producto id 
-// Product.belongsToMany(User, {through: Review}) //  el user id, EL producto tiene reviews de muchos usuarios
+//  Relacion Reviews clientes productos
+Product.hasMany(Review); // producto puede tener muchas review
+User.belongsToMany(Product, {through: Review}) // da el producto id 
+Product.belongsToMany(User, {through: Review}) //  EL producto tiene reviews de muchos usuarios
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
