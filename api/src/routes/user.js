@@ -1,26 +1,9 @@
 const { Router } = require('express');
-const { conn } = require("../db");
-const { User, Product, Review } = conn.models;
+const { userCreate } = require('../Controllers/User/userCreate');
 
 
 const router = Router();
 
-router.post('/', async (req,res) => {  
-    try{
-      let user = await User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password,
-        name: req.body.name,
-        lastName: req.body.lastName,
-        address: req.body.address,
-        image: req.body.image,
-        admin: req.body.admin,
-    })    
-    res.json(user)
-    }catch(error){
-      console.log(error)
-    } 
-})
+router.post('/', userCreate);
 
 module.exports = router;
