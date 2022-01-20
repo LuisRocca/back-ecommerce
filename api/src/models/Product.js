@@ -10,6 +10,7 @@ module.exports = (sequelize) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            // set(value) { this.setDataValue('name', value.toLowerCase()); },
         },
         price: {
             type: DataTypes.FLOAT,
@@ -26,24 +27,24 @@ module.exports = (sequelize) => {
             defaultValue: "Not foundhttps://d500.epimg.net/cincodias/imagenes/2022/01/11/companias/1641922124_752638_1641922274_noticia_normal_recorte1.jpg"
         },
         color: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         storage: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         connectivity: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         model: {
-            type:DataTypes.STRING,
+            type:DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
-        RAM: {
-            type: DataTypes.STRING,
+        ram: {
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
-        },
+        }
     }, {timestamps: false} );
 };
