@@ -18,14 +18,9 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
-<<<<<<< HEAD
-const { conn, Products} = require('./src/db.js');
+const { conn, Product} = require('./src/db.js');
 const { showAllCategory } = require('./src/methods/showAllCategory.js')
 const { showAll } = require('./src/methods/showAll.js')
-=======
-const { conn, Product} = require('./src/db.js');
-const {showAll} = require('./src/methods/index.js')
->>>>>>> 3e9fc2bc09754e816791f6f68a0e8845e2edc823
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {

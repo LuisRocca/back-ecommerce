@@ -24,11 +24,7 @@ module.exports = (sequelize) => {
         },
         image: {
             type: DataTypes.STRING,
-<<<<<<< HEAD
-            defaultValue: "aqui no va la lata de mierda que teniamos"
-=======
             defaultValue: "Not foundhttps://d500.epimg.net/cincodias/imagenes/2022/01/11/companias/1641922124_752638_1641922274_noticia_normal_recorte1.jpg"
->>>>>>> 3e9fc2bc09754e816791f6f68a0e8845e2edc823
         },
         color: {
             type: DataTypes.ARRAY(DataTypes.TEXT),

@@ -4,11 +4,7 @@ const { Router } = require('express');
 const productApple = require('./products.js');
 // const dogsRouter = require('./dogs');
 // const temperamentRouter = require('./temperament');
-<<<<<<< HEAD
 const {showAll} = require('../methods/showAll.js')
-=======
-// const {showAll} = require('../methods/index.js')
->>>>>>> 3e9fc2bc09754e816791f6f68a0e8845e2edc823
 
 const router = Router();
 
