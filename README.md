@@ -5,10 +5,5 @@
 
 para lograr nuestro objetivo como equiponos dimos la tarea de usar json-server y hacer nuestra propia "fake-api" por lo tanto para correrla necesitaras seguir los siguentes pasos:
 
-Para levantar el servidor-json -> Pararse en la carpeta api y escribir el siguiente comando en la consola: json-server -w -p 4000 api.json
+Para levantar el app necesitaras tener nodemon -g de manera global en tu ordenador! teniendo en claro que est solo es e archivo del back 
 
-Ojo necesitas tener json-server de manera global en tu sistema!
-
-MAC : sudo npm i -g json-server
-
-WD : npm i -g json-server
