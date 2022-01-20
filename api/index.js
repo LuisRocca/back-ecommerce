@@ -19,12 +19,14 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const {showAll} = require('./src/methods/index.js')
+const { showAllCategory } = require('./src/methods/showAllCategory.js')
+const { showAll } = require('./src/methods/showAll.js')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   server.listen(process.env.PORT || 3001 , async () => {
     console.log('%s listening at 3001'); // 
+    await showAllCategory();
     await showAll();
   });
 });
