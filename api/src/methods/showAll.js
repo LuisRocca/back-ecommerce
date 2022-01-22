@@ -9,9 +9,9 @@ module.exports = {
         appleProduct = appleProduct.products.map(e=>{
             return {
                 name: e.name,
-                price: 10.0,
-                stock: 10,
-                image: 'not found',
+                price: e.price,
+                stock: e.stock,
+                image: e.image ? e.image : 'not found',
                 color: e.color,
                 storage: e.storage,
                 connectivity: e.connectivity,
