@@ -15,6 +15,7 @@ module.exports = {
                 color: e.color,
                 storage: e.storage,
                 connectivity: e.connectivity,
+                description: e.description,
                 model: e.model,
                 ram: e.ram,
                 category: e.category
@@ -30,6 +31,7 @@ module.exports = {
                     color: appleProduct[i].color,
                     storage: appleProduct[i].storage,
                     connectivity: appleProduct[i].connectivity,
+                    description: appleProduct[i].description,
                     model: appleProduct[i].model,
                     ram: appleProduct[i].ram
                 }
