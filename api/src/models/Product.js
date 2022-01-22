@@ -39,12 +39,16 @@ module.exports = (sequelize) => {
             allowNull: true,
         },
         model: {
-            type:DataTypes.ARRAY(DataTypes.TEXT),
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         ram: {
             type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
-        }
+        },
+        description: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
     }, {timestamps: false} );
 };
