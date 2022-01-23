@@ -9,9 +9,10 @@ const reviewByCategory = async(req, res) => {
      response.map(async  i => {
       const user = await User.findByPk(i.userId)
       //  console.log(user, "este es el user que esta 34")  
+      console.log('esto es la i', i)
         return {
-          review: i.dataValues,
-          user
+          review: i.dataValues, 
+          user: user.dataValues.username
         }
     })
     res.status(200).json(response)
