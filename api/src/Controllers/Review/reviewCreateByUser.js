@@ -10,11 +10,13 @@ const reviewCreateByUser = async (req, res) => {
       
       const response = await Review.update(
        { commentary, calification },
-       {   where: { productId: idProduct, userId: idUser }, },
+       {   where: { productId: idProduct, userId: idUser}, },
       )
-       response === 1
-       ? res.status(200).json({res: "se a creado una nueva Review"})
-       : res.status(401).json({ msg: "id de usuario o producto invalido"})
+      console.log('esta es la respuesta', response)
+      //  response === [ 1 ]
+      //  ? res.status(200).json({res: "se a creado una nueva Review"})
+      //  : res.status(401).json({ msg: "id de usuario o producto invalido"})
+      res.status(200).json({res: "se a creado una nueva Review"})
        } 
      catch (error) {
        res.status(400).json({msg: "este error no esta controlado"})
