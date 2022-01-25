@@ -12,7 +12,7 @@ const reviewCreateByUser = async (req, res) => {
        { commentary, calification },
        {   where: { productId: idProduct, userId: idUser }, },
       )
-       response === [1]
+       response === 1
        ? res.status(200).json({res: "se a creado una nueva Review"})
        : res.status(401).json({ msg: "id de usuario o producto invalido"})
        } 
