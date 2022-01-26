@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { createProduct } = require('../Controllers/Admin/createProduct');
+const { deleteProduct } = require('../Controllers/Admin/deleteProduct');
 
 
 const router = Router();
@@ -12,8 +13,8 @@ router.post('/create', createProduct);
 
 
 
-// ------------------ Ruta get para tarer todas las review del usurio
+// ------------------ Ruta delete para eliminar productos
 
-
+router.delete('/delete/:id', deleteProduct);
 
 module.exports = router; 
