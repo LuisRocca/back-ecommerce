@@ -1,13 +1,13 @@
 const { conn } = require("../../db");
 const { Product } = conn.models;
 
-const deleteProduct = async (req, res) => {
+const deleteProduct = async (req, res, next) => {
   try {
-    let { id } = req.body;
+    let { id } = req.params;
 
-    let searchIdProduct = await conn.models.Product.findAll({
+    let searchIdProduct = await Product.findAll({
       where: {
-        id: id,
+        id,
       },
     });
 
@@ -15,15 +15,16 @@ const deleteProduct = async (req, res) => {
       return res.status(409).send("El ID del Producto no existe");
     }
 
-    let deleteProd = await conn.models.Product.destroy({
+    let deleteProd = await Product.destroy({
       where: {
-        id: id,
+        id,
       },
     });
 
     res.status(200).send("Producto eliminado");
   } catch (err) {
-    res.status(404).send("ha ocurrido un error en la db");
+      next(err)
+    //res.status(404).send("ha ocurrido un error en la db");
   }
 }
 

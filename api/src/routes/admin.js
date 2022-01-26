@@ -14,7 +14,8 @@ router.post('/create', createProduct);
 
 router.put('/edit/:id', editProduct);
 
-// ------------------ Ruta delete para eliminar un productos
+
+// ------------------ Ruta delete para eliminar productos
 
 router.delete('/delete/:id', deleteProduct);
 
