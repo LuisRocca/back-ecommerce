@@ -12,11 +12,16 @@ const userCreate = async (req,res) => {
         address: req.body.address,
         image: req.body.image,
         admin: req.body.admin,
+        loginWithGoogle: req.body.loginWithGoogle ? req.body.loginWithGoogle : false,
     })
+
+    // console.log(user, "estes es el user que jode ")
+    
     res.json(user)
     }catch(error){
-      console.log(error)
-    }
+      // console.log(error.parameters)
+      res.status(202).json({msg: "este usuario ya existe"})
+    } 
 };
 
 module.exports = {
