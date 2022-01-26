@@ -1,5 +1,7 @@
 const { Router } = require('express');
 const { createProduct } = require('../Controllers/Admin/createProduct');
+const { deleteProduct } = require('../Controllers/Admin/deleteProduct');
+const { editProduct } = require('../Controllers/Admin/editProduct');
 
 
 const router = Router();
@@ -8,12 +10,12 @@ const router = Router();
 
 router.post('/create', createProduct);
 
-// -------------------- Ruta PUT para modificar las review del usuario ya que solo hay uno por usuario
+// -------------------- Ruta PUT para modificar un productos
 
+router.put('/edit/:id', editProduct);
 
+// ------------------ Ruta delete para eliminar un productos
 
-// ------------------ Ruta get para tarer todas las review del usurio
-
-
+router.delete('/delete/:id', deleteProduct);
 
 module.exports = router; 
