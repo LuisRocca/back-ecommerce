@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('products', {
+    sequelize.define('product', {
         id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -24,27 +24,31 @@ module.exports = (sequelize) => {
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: "aqui no va la lata de mierda que teniamos"
+            defaultValue: "Not foundhttps://d500.epimg.net/cincodias/imagenes/2022/01/11/companias/1641922124_752638_1641922274_noticia_normal_recorte1.jpg"
         },
         color: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
+            allowNull: true,
         },
         storage: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         connectivity: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
         model: {
-            type:DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
         },
-        RAM: {
-            tipe: DataTypes.STRING,
+        ram: {
+            type: DataTypes.ARRAY(DataTypes.TEXT),
             allowNull: true,
-        }
+        },
+        description: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
     }, {timestamps: false} );
 };
