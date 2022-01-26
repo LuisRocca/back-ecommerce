@@ -8,6 +8,7 @@ const productsByCategory = async (req, res) => {
         const allProductByCategory = await Product.findAll({where:{idCategory:newCategory[0].dataValues.idCategory}});
         return res.json(allProductByCategory);
     } catch (err) {
+        console-log(err)
         res.json({msg: err})
     };
 };
