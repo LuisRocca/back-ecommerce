@@ -47,6 +47,9 @@ module.exports = (sequelize) => {
     }, password: {
       type: Sequelize.STRING,
       allowNull: false
+    }, loginWithGoogle: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     }
   },
   {
