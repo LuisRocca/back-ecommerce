@@ -3,6 +3,7 @@ const { Router } = require('express');
 const user = require('./user');
 const review = require('./review');
 const productApple = require('./products.js');
+const admin = require('./admin.js');
 
 
 const router = Router();
@@ -16,6 +17,7 @@ router.get('/', (req, res) => {
 router.use('/review', review);
 router.use('/user', user);
 router.use('/products', productApple);
+router.use('/admin', admin);
 
 
 module.exports = router;
