@@ -17,6 +17,6 @@ router.put('/edit/:id', editProduct);
 
 // ------------------ Ruta delete para eliminar productos
 
-router.delete('/delete/:id', deleteProduct);
+router.delete('/delete', deleteProduct);
 
 module.exports = router; 

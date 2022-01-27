@@ -3,7 +3,7 @@ const { Product } = conn.models;
 
 const deleteProduct = async (req, res, next) => {
   try {
-    let { id } = req.params;
+    let { id } = req.body;
 
     let searchIdProduct = await Product.findAll({
       where: {
