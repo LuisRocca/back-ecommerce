@@ -21,7 +21,6 @@ const deleteProduct = async (req, res, next) => {
         id,
       },
     });
-    console.log(id)
     res.status(200).send("Producto eliminado");
   } catch (err) {
       next(err)
