@@ -2,8 +2,9 @@ const { conn } = require("../../db");
 const { Product } = conn.models;
 
 const deleteProduct = async (req, res, next) => {
+  let id= req.params.id
   try {
-    let { id } = req.body;
+    
 
     let searchIdProduct = await Product.findAll({
       where: {
@@ -20,7 +21,7 @@ const deleteProduct = async (req, res, next) => {
         id,
       },
     });
-
+    console.log(id)
     res.status(200).send("Producto eliminado");
   } catch (err) {
       next(err)
