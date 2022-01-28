@@ -20,7 +20,8 @@ const userCreate = async (req,res) => {
     res.json(user)
     }catch(error){
       // console.log(error.parameters)
-      res.status(202).json({msg: "este usuario ya existe"})
+      const user = await User.findAll({where:{username: req.body.username}})
+      res.status(202).json(user)
     } 
 };
 
