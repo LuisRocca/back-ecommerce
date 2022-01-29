@@ -5,6 +5,7 @@ const review = require('./review');
 const productApple = require('./products.js');
 const admin = require('./admin.js');
 const category = require('./category');
+const mercadoPago = require('./mercadoPago');
 
 
 const router = Router();
@@ -19,6 +20,7 @@ router.use('/user', user);
 router.use('/products', productApple);
 router.use('/admin', admin);
 router.use('/category', category);
+router.use('/mercadopago', mercadoPago);
 
 
 module.exports = router;
