@@ -7,6 +7,7 @@ const admin = require('./admin.js');
 const category = require('./category');
 const mercadoPago = require('./mercadoPago');
 const order = require('./order.js')
+const favorites = require('./favorites');
 
 
 const router = Router();
@@ -22,7 +23,8 @@ router.use('/products', productApple);
 router.use('/admin', admin);
 router.use('/category', category);
 router.use('/mercadopago', mercadoPago);
-router.use('/order', order)
+router.use('/order', order);
+router.use('/favorites', favorites);
 
 
 module.exports = router;

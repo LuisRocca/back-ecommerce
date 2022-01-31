@@ -6,6 +6,6 @@ const { userLogin } = require('../Controllers/User/userLogin');
 const router = Router();
 
 router.post('/', userCreate);
-router.post('/login', userLogin)
+router.post('/login', userLogin);
 
 module.exports = router;
