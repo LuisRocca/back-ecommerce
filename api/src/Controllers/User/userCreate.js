@@ -14,6 +14,7 @@ const userCreate = async (req,res) => {
         admin: req.body.admin,
         loginWithGoogle: req.body.loginWithGoogle ? req.body.loginWithGoogle : false,
     })
+    // res.send("usuario creado correctamente")
 
     // console.log(user, "estes es el user que jode ")
     
