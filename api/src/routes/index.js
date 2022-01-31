@@ -5,6 +5,7 @@ const review = require('./review');
 const productApple = require('./products.js');
 const admin = require('./admin.js');
 const order = require('./order.js')
+const category = require('./category.js')
 
 
 const router = Router();
@@ -18,7 +19,8 @@ router.use('/review', review);
 router.use('/user', user);
 router.use('/products', productApple);
 router.use('/admin', admin);
-router.use('/order', order)
+router.use('/order', order);
+router.use('/category', category);
 
 
 module.exports = router;
