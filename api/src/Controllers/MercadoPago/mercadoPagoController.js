@@ -11,18 +11,8 @@ mercadopago.configure({
 const mercadoPagoController = async(req, res, next)=>{
   
   // Crea un objeto de preferencia
-  var preference = {
-    items: [
-        { title: 'Mi producto',
-        quantity: 1,
-        currency_id: 'ARS',
-        unit_price: 75.56 },
-    { title: 'Mi producto 2',
-        quantity: 2,
-        currency_id: 'ARS',
-        unit_price: 96.56 }
-    ]
-  }  
+  const preference = req.body
+  console.log('AQUI',preference)
   mercadopago.preferences
   .create(preference)
   .then(function (response) {
