@@ -3,6 +3,7 @@ const { createOrder } = require('../Controllers/Order/createOrder');
 const { getOrder } = require('../Controllers/Order/getOrder');
 const { getOrderUser } = require('../Controllers/Order/getOrderUser');
 const { getOpenOrders } = require('../Controllers/Order/getOpenOrders');
+const { editOrder } = require('../Controllers/Order/editOrder')
 
 
 const router = Router();
@@ -22,6 +23,10 @@ router.get('/:idUser', getOrderUser)
 // ruta de obtencion ordenes abiertas de un usuario
 
 router.get('/user/:idUser', getOpenOrders)
+
+// ruta de modificacion de carrito de la orden
+
+router.put(`/:idUser`, editOrder)
 
 
 
