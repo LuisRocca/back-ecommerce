@@ -13,7 +13,7 @@ const userLogin = async (req,res) => {
         //  console.log(userAuth[0].dataValues.password , "este es el recorrido")
         response ?
         res.status(200).json({
-             userName:userAuth[0].dataValues.username ,
+             username:userAuth[0].dataValues.username ,
              admin: userAuth[0].dataValues.admin,
              id: userAuth[0].dataValues.id 
              }) :
