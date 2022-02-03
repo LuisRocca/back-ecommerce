@@ -12,14 +12,15 @@ const mercadoPagoController = async(req, res, next)=>{
   
   // Crea un objeto de preferencia
   const preference = req.body
-  console.log('AQUI',preference)
+  //console.log('AQUI',preference)
   mercadopago.preferences
   .create(preference)
-  .then(function (response) {
-    res.status(200).json(response);
+  .then(response=> {
+    console.log('RESPUESTA',response)
+    return res.redirect('https://www.google.com');
   })
-  .catch(function (error) {
-    console.log(error);
+  .catch(error=> {
+    next(error);
   });
 };
   
