@@ -24,7 +24,9 @@ const userCreate = async (req,res) => {
     })
     res.status(200).json(user)
       } else {
-        res.status(202).json({id:comprobante.dataValues.id})
+        // res.status(202).json({id:comprobante.dataValues.id, username: comprobante.dataValues.username, admin: comprobante.dataValues.admin})
+          res.status(202).json(comprobante.dataValues)
+
       }    
     }catch(error){
       res.status(402).json(error)
