@@ -1,12 +1,13 @@
-const nodemailer = require('nodemailer');
-const {USER, PASS} = process.env;
+const {USER, PASS, PROD_ACCESS_TOKEN} = process.env;
 
-const sendMail = async(req, res, next)=>{
-    const mmm = req;
-  
+const callReception = async(req, res, next)=>{
+    const { data } = req.body;
     try{
+        const datosCompra = await axios.get(`https://api.mercadopago.com/v1/payments/${data.id}?access_token=${PROD_ACCESS_TOKEN}`)
+        
         contentHTML = `
-            <h1>ESTO ES UNA PRUEBA</h1>
+            <h1>GRACIAS POR COMPRAR EN IGROUP-6</h1>
+            
         `;
         const transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -29,9 +30,9 @@ const sendMail = async(req, res, next)=>{
         return res.status(200).json(info)
     }catch(err){
         next(err)
-      }
+    }
   };
     
-    module.exports = {
-        sendMail
-    }
+  module.exports = {
+    callReception
+  }
