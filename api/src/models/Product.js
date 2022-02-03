@@ -14,12 +14,12 @@ module.exports = (sequelize) => {
         },
         price: {
             type: DataTypes.FLOAT,
-            allowNull: true,
+            allowNull: false,
             validate: { min: 0.1 },
         },
         stock: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             validate: { min: 0 },
         },
         image: {
@@ -48,7 +48,7 @@ module.exports = (sequelize) => {
         },
         description: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: false,
         },
     }, {timestamps: false} );
 };
