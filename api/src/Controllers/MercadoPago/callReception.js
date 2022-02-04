@@ -1,4 +1,6 @@
 const {USER, PASS, PROD_ACCESS_TOKEN} = process.env;
+const nodemailer = require('nodemailer');
+const axios = require('axios');
 
 const callReception = async(req, res, next)=>{
     const { data } = req.body;
@@ -25,7 +27,7 @@ const callReception = async(req, res, next)=>{
             from: "'Igroup Ventas' <USER>",
             to: 'arielsoda14@gmail.com',
             subject: 'Prueba',
-            text: 'prueba'
+            text: contentHTML
         });
         return res.status(200).json(info)
     }catch(err){
