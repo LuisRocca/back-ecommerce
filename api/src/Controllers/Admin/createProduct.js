@@ -1,31 +1,25 @@
 const { conn } = require("../../db");
-const { Product, Category, User } = conn.models;
+const { Product} = conn.models;
 
 
 const createProduct = async (req, res, next)=>{
     try{
-        const { idCategory, name, description, image, color, price, stock, storage, connectivity, model, ram }=req.body;
+        let {idCategory, name, description, image, color, price, stock, storage, connectivity, model, ram}=req.body;
 
-        if ( idCategory && name && description && image && price && stock ) {
-            const newProduct = await Product.create(
-                {
-                    name,
-                    price,
-                    stock,
-                    image,
-                    color,
-                    storage,
-                    connectivity,
-                    description,
-                    model,
-                    ram
-                }
-            );
-            await newProduct.setCategory(idCategory.idCategory);
-            return res.status(200).json({msg:'El producto fue creado exitosamente'});
-        }else{
-            return res.status(409).json({msg:'Faltan argumentos requeridos'});
-        }
+            let newProduct= await Product.create({ // creamos el producto
+                name,
+                description,
+                image,
+                color,
+                price,
+                stock,
+                storage,
+                connectivity,
+                model,
+                ram
+                });
+                newProduct.setCategory(idCategory) // le seteamos el id de la categoria
+                res.send(newProduct) // mostramos en  pantalla el producto creado
     }
     catch(err){
         next(err)

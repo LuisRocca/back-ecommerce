@@ -3,11 +3,13 @@ const { Category } = conn.models;
 
 
 const categoryCreate = async(req, res, next)=>{
-    const {name} = req.query;
+    const {name} = req.body;
     try{
         const newCategory = await Category.findOrCreate(
             {
-                where: { name: name }
+                where: {
+                    name
+                }
             }
         );
         return res.status(200).json(newCategory);
