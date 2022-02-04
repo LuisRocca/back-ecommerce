@@ -12,11 +12,7 @@ const userLogin = async (req,res) => {
         const response = comparePassword( userAuth[0].dataValues.password , password ) 
         //  console.log(userAuth[0].dataValues.password , "este es el recorrido")
         response ?
-        res.status(200).json({
-             username:userAuth[0].dataValues.username ,
-             admin: userAuth[0].dataValues.admin,
-             id: userAuth[0].dataValues.id 
-             }) :
+        res.status(200).json(userAuth[0].dataValues) :
         res.status(400).json({msg: "contraseña incorrecta"})
     } catch (error) {
       res.status(404).json({msg: "usuario invalido"})
