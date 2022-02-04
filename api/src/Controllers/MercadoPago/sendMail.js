@@ -2,11 +2,16 @@ const nodemailer = require('nodemailer');
 const {USER, PASS} = process.env;
 
 const sendMail = async(req, res, next)=>{
-    const mmm = req;
+    const { name, email, message } = req.body;
   
     try{
         contentHTML = `
-            <h1>ESTO ES UNA PRUEBA</h1>
+            <h1>User Information</h1>
+            <ul>
+                <li>Username: ${name}</li>
+                <li>Email: ${email}</li>
+            </ul>
+            <p>${message}</p>          
         `;
         const transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -21,10 +26,10 @@ const sendMail = async(req, res, next)=>{
         });
 
         const info = await transporter.sendMail({
-            from: "'Igroup Ventas' <USER>",
-            to: 'arielsoda14@gmail.com',
-            subject: 'Prueba',
-            text: 'prueba'
+            from: `'Igroup Ventas' <${USER}>`,
+            to: USER,
+            subject: 'Contacto de wed Igroup',
+            html: contentHTML
         });
         return res.status(200).json(info)
     }catch(err){
@@ -32,6 +37,6 @@ const sendMail = async(req, res, next)=>{
       }
   };
     
-    module.exports = {
-        sendMail
-    }
+module.exports = {
+    sendMail
+};
