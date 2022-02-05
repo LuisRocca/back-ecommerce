@@ -62,10 +62,6 @@ const {Product, User, Review, Category, Order} = sequelize.models;
 User.hasMany(Order) //Usuario puede tener muchas ordenes
 Order.belongsTo(User) //Una orden pertenecen a un unico usuario
 
-//Aca relacion de favoritos
-// Product.belongsToMany(User, {through: 'favorite'});
-// User.belongsToMany(Product, {through: 'favorite'});
-
 //  Relacion Reviews clientes productos
 Product.hasMany(Review); // producto puede tener muchas review
 User.belongsToMany(Product, {through: Review}) // da el producto id 
