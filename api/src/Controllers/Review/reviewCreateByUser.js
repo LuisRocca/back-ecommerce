@@ -7,12 +7,13 @@ const reviewCreateByUser = async (req, res) => {
      const {commentary, calification} = req.body;
      const user = await User.findByPk(idUser);
                await user?.addProduct(idProduct)
-      console.log(user.dataValues.username)
+      // console.log(user.dataValues.username, "este es el de mas arribita")
       const response = await Review.update(
        { commentary, calification,  },
       //  { include: { user: user.dataValues.username} } ,
        {   where: { productId: idProduct, userId: idUser, },  },
       ) 
+      console.log(response[0], "no sabemos d donde")
        response[0] === 1
        ? res.status(200).json({res: "se a creado una nueva Review"})
        : res.status(401).json({ msg: "id de usuario o producto invalido"})
