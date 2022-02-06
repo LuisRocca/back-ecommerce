@@ -2,11 +2,11 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
     sequelize.define('product', {
-        id: {
-            type: DataTypes.UUID,
-            primaryKey: true,
-            defaultValue: DataTypes.UUIDV4,
-        },
+        // id: {
+        //     type: DataTypes.UUID,
+        //     primaryKey: true,
+        //     defaultValue: DataTypes.UUIDV4,
+        // },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -14,12 +14,12 @@ module.exports = (sequelize) => {
         },
         price: {
             type: DataTypes.FLOAT,
-            allowNull: true,
+            allowNull: false,
             validate: { min: 0.1 },
         },
         stock: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             validate: { min: 0 },
         },
         image: {
@@ -48,7 +48,7 @@ module.exports = (sequelize) => {
         },
         description: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: false,
         },
     }, {timestamps: false} );
 };
