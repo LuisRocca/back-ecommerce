@@ -12,11 +12,9 @@ const mercadoPagoController = async(req, res, next)=>{
   
   // Crea un objeto de preferencia
   const preference = req.body
-  console.log('AQUI',preference)
   mercadopago.preferences
   .create(preference)
   .then(response=> {
-    console.log('RESPUESTA',response)
     return res.status(200).json(response);
   })
   .catch(error=> {
