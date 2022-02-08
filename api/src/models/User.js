@@ -50,7 +50,11 @@ module.exports = (sequelize) => {
     }, loginWithGoogle: {
       type: DataTypes.BOOLEAN,
       allowNull: false
-    }
+    },
+    banned:{
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   },
   {
     hooks: {
