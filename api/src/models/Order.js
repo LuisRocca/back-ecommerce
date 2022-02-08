@@ -10,13 +10,13 @@ module.exports = (sequelize) => {
         allowNull: true
     },
     status: {
-        type: DataTypes.ENUM('open', 'created', 'processing', 'cancelled', 'completed'),
+        type: DataTypes.ENUM('open', 'created', 'processing', 'cancelled', 'approved'),
         allowNull: false
     },
-    // payment_id:{
-    //     type: DataTypes.INTEGER,
-    //     defaultValue: 0
-    // },
+    payment_id:{
+         type: DataTypes.INTEGER,
+         defaultValue: 0
+     },
     // payment_status:{
     //     type: DataTypes.STRING,
     //     defaultValue: ""

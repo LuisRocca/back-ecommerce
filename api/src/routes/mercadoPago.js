@@ -1,8 +1,7 @@
 const { Router } = require('express');
 const { mercadoPagoController } = require('../Controllers/MercadoPago/mercadoPagoController');
 const { sendMail } = require('../Controllers/MercadoPago/sendMail');
-const { callReception } = require('../Controllers/MercadoPago/callReception')
-
+const { callReception } = require('../Controllers/MercadoPago/callReception');
 
 const router = Router();
 

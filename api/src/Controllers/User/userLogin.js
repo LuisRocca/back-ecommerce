@@ -9,6 +9,7 @@ const userLogin = async (req,res) => {
         }
         const { email , password } = req.body
         const userAuth = await User.findAll({where: { email:email },})
+        // console.log(userAuth, "estes es el user aut")
         const response = comparePassword( userAuth[0].dataValues.password , password ) 
         //  console.log(userAuth[0].dataValues.password , "este es el recorrido")
         response ?

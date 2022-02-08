@@ -3,7 +3,8 @@ const { createOrder } = require('../Controllers/Order/createOrder');
 const { getOrder } = require('../Controllers/Order/getOrder');
 const { getOrderUser } = require('../Controllers/Order/getOrderUser');
 const { getOpenOrders } = require('../Controllers/Order/getOpenOrders');
-const { editOrder } = require('../Controllers/Order/editOrder')
+const { editOrder } = require('../Controllers/Order/editOrder');
+const { updateOrder } = require('../Controllers/Order/updateOrder');
 
 
 const router = Router();
@@ -28,6 +29,7 @@ router.get('/user/:idUser', getOpenOrders)
 
 router.put(`/:idUser`, editOrder)
 
+router.put('/update/:idUser', updateOrder);
 
 
 module.exports = router; 
