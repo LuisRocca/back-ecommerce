@@ -4,6 +4,8 @@ const { deleteProduct } = require('../Controllers/Admin/deleteProduct');
 const { editProduct } = require('../Controllers/Admin/editProduct');
 const { userDelete } = require('../Controllers/Admin/userDelete');
 const { userEdit } = require('../Controllers/Admin/userEdit');
+const { editUserbane } = require('../Controllers/Admin/userEditbane');
+
 
 
 const router = Router();
@@ -24,5 +26,9 @@ router.delete('/delete/:id', deleteProduct);
 router.delete('/user/delete/:id', userDelete);
 
 router.put('/user/edit/:id', userEdit);
+
+router.put('/user/editbane/:id', editUserbane);
+
+
 
 module.exports = router; 
