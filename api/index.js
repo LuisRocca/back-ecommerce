@@ -23,7 +23,8 @@ const { showAllCategory } = require('./src/methods/showAllCategory.js')
 const { showAll } = require('./src/methods/showAll.js')
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+// cambiar a true cuando lo suba a la rama
+conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT || 3001 , async () => {
     console.log('%s listening at 3001'); // 
     await showAllCategory();
