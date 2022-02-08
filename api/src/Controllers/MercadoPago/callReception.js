@@ -43,7 +43,7 @@ const callReception = async(req, res, next)=>{
         });
         return res.status(200).json(info.id)
     }catch(err){
-        next(err)
+        console.log(err)
     };
   };
     
