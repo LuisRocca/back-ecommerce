@@ -9,7 +9,7 @@ const callReception = async(req, res, next)=>{
         contentHTML = `
             <h1> GRACIAS POR COMPRAR EN IGROUP-6 </h1>
             <p> Su compra a sido procesada con éxito, en breve recibira la factura electronica por este medio. </p>
-            <h3>Datos del comprador</h3>
+            <h3>Datos del comprador</h3> 
             <ul>
                 <li>Nombre: ${name} ${surname} </li>
                 <li>Documento: ${identification.type} ${identification.number} </li>
